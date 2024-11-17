@@ -5,7 +5,6 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon NODE_ENV=development server",
-    "build": "npm i node server",
     "start": "node server.js"
   },
   "keywords": [],
