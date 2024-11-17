@@ -34,3 +34,7 @@ app.all("*", (req, res, next) => {
 app.use(globalError);
 
 module.exports = app;
+
+// "routes": [
+//   { "src": "/(.*)", "dest": "/server.js" }
+// ]
