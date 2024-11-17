@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -32,7 +33,7 @@ app.all("*", (req, res, next) => {
     .status(404)
     .json({ message: `can't find this route: ${req.originalUrl}` });
 });
-app.use(globalError);
 //============== Global errors handling ==============
+app.use(globalError);
 
 module.exports = app;
