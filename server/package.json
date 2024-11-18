@@ -1,7 +1,6 @@
 {
-  "name": "social-media",
+  "name": "social-media-api",
   "version": "1.0.0",
-  "description": "social media app",
   "main": "server.js",
   "dependencies": {
     "abbrev": "^1.1.1",
@@ -169,6 +168,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "ramez",
+  "license": "ISC",
+  "description": ""
 }
