@@ -22,7 +22,7 @@ const registerSchema = yup.object().shape({
   email: yup.string().email("invalid email").required("required"),
   password: yup.string().required("required"),
   location: yup.string().required("required"),
-  image: yup.string(),
+  image: yup.string().nullable(),
 });
 
 const loginSchema = yup.object().shape({
@@ -73,7 +73,7 @@ const Form = () => {
     for (let value in values) {
       formData.append(value, values[value]);
     }
-    formData.append("image", values.image.name);
+    values.image && formData.append("image", values.image.name);
     try {
       const newUser = await axios.post(
         "http://localhost:4444/auth/register",
